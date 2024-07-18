@@ -1,0 +1,10 @@
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\bin\Debug\WindowGUI.exe.config
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\bin\Debug\WindowGUI.exe
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\bin\Debug\WindowGUI.pdb
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.csproj.AssemblyReference.cache
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.Properties.Resources.resources
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.csproj.GenerateResource.cache
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.csproj.CoreCompileInputs.cache
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.exe
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.pdb
+D:\CodeCSharp\Practices\WindowGUI\WindowGUI\obj\Debug\WindowGUI.View.PetView.resources
