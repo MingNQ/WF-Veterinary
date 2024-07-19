@@ -30,9 +30,9 @@ namespace WindowGUI.View
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
-                if (e.KeyCode == Keys.Enter) 
+                if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
-            }
+            };
         }
 
         // Properties
@@ -57,7 +57,7 @@ namespace WindowGUI.View
         public string PetColor 
         { 
             get { return txtPetColor.Text; }
-            set { txtPetColor.Text = value;
+            set { txtPetColor.Text = value; }
         }
 
         public string SearchValue
