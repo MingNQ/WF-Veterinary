@@ -23,6 +23,7 @@ namespace WindowGUI.View
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabPagePet.TabPages.Remove(tabPagePetDetail);
+            btnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -97,6 +98,28 @@ namespace WindowGUI.View
         {
             dataGridView.DataSource = petList;
         }
-        
+
+        // Singleton pattern (Open a single form instance)
+        private static PetView instance;
+
+        public static PetView GetInstance(Form parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)// If not exist
+            {
+                instance = new PetView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else // else if exist => bring to front
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+
+                instance.BringToFront();
+            }
+
+            return instance;
+        }
     }
 }

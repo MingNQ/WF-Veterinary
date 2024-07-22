@@ -22,12 +22,10 @@ namespace WindowGUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string connectionString = "Data Source=ITK-20221221TUA\\SQLEXPRESS;Initial Catalog=VeterinaryDB;"
+            string sqlConnectionString = "Data Source=ITK-20221221TUA\\SQLEXPRESS;Initial Catalog=VeterinaryDB;"
                 + "Integrated Security=True";
-            IPetView view = new PetView();
-            IPetRepository repository = new PetRepository(connectionString);
-            new PetPresenter(view, repository);
-
+            IMainView view = new MainView();
+            new MainPresenter(view, sqlConnectionString);
             Application.Run((Form) view);
         }
     }
