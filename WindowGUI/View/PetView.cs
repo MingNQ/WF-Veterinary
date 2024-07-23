@@ -22,17 +22,74 @@ namespace WindowGUI.View
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
-            tabPagePet.TabPages.Remove(tabPagePetDetail);
+            tabControl.TabPages.Remove(tabPagePetDetail);
             btnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
         {
+            // Search event
             btnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             txtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
+            };
+
+            // Add new event
+            btnAdd.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPagePetList);
+                tabControl.TabPages.Add(tabPagePetDetail);
+                tabPagePetDetail.Text = "Add New Pet";
+            };
+
+            // Edit event
+            btnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPagePetList);
+                tabControl.TabPages.Add(tabPagePetDetail);
+                tabPagePetDetail.Text = "Edit Pet";
+            };
+
+            // Save event
+            btnSave.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+
+                if (isSuccessful)
+                {
+                    tabControl.TabPages.Remove(tabPagePetDetail);
+                    tabControl.TabPages.Add(tabPagePetList);
+                }
+
+                // Show result
+                MessageBox.Show(Message);
+            };
+
+            // Cancel event
+            btnCancel.Click += delegate
+            {
+                CancleEvent?.Invoke(this, EventArgs.Empty);
+                tabControl.TabPages.Remove(tabPagePetDetail);
+                tabControl.TabPages.Add(tabPagePetList);
+            };
+
+            // Delete event
+            btnDelete.Click += delegate
+            {
+
+                // Confirm delete
+                var result = MessageBox.Show("Are you sure to delete the selected pet?", "Warning", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
             };
         }
 

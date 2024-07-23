@@ -155,6 +155,7 @@
   <ItemGroup>
     <Compile Include="Model\IPetRepository.cs" />
     <Compile Include="Model\PetModel.cs" />
+    <Compile Include="Presenter\Common\ModelDataValidation.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\PetPresenter.cs" />
     <Compile Include="Program.cs" />

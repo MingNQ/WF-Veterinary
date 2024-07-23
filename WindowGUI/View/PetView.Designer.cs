@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPagePet = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPagePetList = new System.Windows.Forms.TabPage();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -40,8 +41,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPagePetDetail = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtPetColor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPetType = new System.Windows.Forms.TextBox();
@@ -50,9 +51,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPetId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.tabPagePet.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.tabPagePetList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPagePetDetail.SuspendLayout();
@@ -70,6 +70,20 @@
             this.panel1.Size = new System.Drawing.Size(800, 64);
             this.panel1.TabIndex = 0;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.IndianRed;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClose.Location = new System.Drawing.Point(763, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(33, 32);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -80,17 +94,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PETS";
             // 
-            // tabPagePet
+            // tabControl
             // 
-            this.tabPagePet.Controls.Add(this.tabPagePetList);
-            this.tabPagePet.Controls.Add(this.tabPagePetDetail);
-            this.tabPagePet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPagePet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPagePet.Location = new System.Drawing.Point(0, 64);
-            this.tabPagePet.Name = "tabPagePet";
-            this.tabPagePet.SelectedIndex = 0;
-            this.tabPagePet.Size = new System.Drawing.Size(800, 386);
-            this.tabPagePet.TabIndex = 1;
+            this.tabControl.Controls.Add(this.tabPagePetList);
+            this.tabControl.Controls.Add(this.tabPagePetDetail);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.Location = new System.Drawing.Point(0, 64);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(800, 386);
+            this.tabControl.TabIndex = 1;
             // 
             // tabPagePetList
             // 
@@ -185,8 +199,8 @@
             // 
             // tabPagePetDetail
             // 
-            this.tabPagePetDetail.Controls.Add(this.button6);
-            this.tabPagePetDetail.Controls.Add(this.button5);
+            this.tabPagePetDetail.Controls.Add(this.btnCancel);
+            this.tabPagePetDetail.Controls.Add(this.btnSave);
             this.tabPagePetDetail.Controls.Add(this.txtPetColor);
             this.tabPagePetDetail.Controls.Add(this.label6);
             this.tabPagePetDetail.Controls.Add(this.txtPetType);
@@ -203,23 +217,23 @@
             this.tabPagePetDetail.Text = "Pet detail";
             this.tabPagePetDetail.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnCancel
             // 
-            this.button6.Location = new System.Drawing.Point(243, 292);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(180, 36);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Cancel";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(243, 292);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(180, 36);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnSave
             // 
-            this.button5.Location = new System.Drawing.Point(34, 292);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 36);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(34, 292);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(180, 36);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // txtPetColor
             // 
@@ -289,33 +303,19 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Pet ID:";
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.IndianRed;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Location = new System.Drawing.Point(763, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(33, 32);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabPagePet);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel1);
             this.Name = "PetView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetView";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabPagePet.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.tabPagePetList.ResumeLayout(false);
             this.tabPagePetList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -329,7 +329,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabPagePet;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPagePetList;
         private System.Windows.Forms.TabPage tabPagePetDetail;
         private System.Windows.Forms.Button btnSearch;
@@ -346,8 +346,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPetColor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnClose;
     }
