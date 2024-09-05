@@ -35,6 +35,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
             this.panel1.Controls.Add(this.btnPets);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -44,13 +45,17 @@
             // 
             // btnPets
             // 
+            this.btnPets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(67)))), ((int)(((byte)(147)))));
+            this.btnPets.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPets.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
+            this.btnPets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPets.Location = new System.Drawing.Point(3, 76);
+            this.btnPets.Location = new System.Drawing.Point(-8, 76);
             this.btnPets.Name = "btnPets";
-            this.btnPets.Size = new System.Drawing.Size(194, 30);
+            this.btnPets.Size = new System.Drawing.Size(216, 37);
             this.btnPets.TabIndex = 0;
             this.btnPets.Text = "Pets";
-            this.btnPets.UseVisualStyleBackColor = true;
+            this.btnPets.UseVisualStyleBackColor = false;
             // 
             // MainView
             // 

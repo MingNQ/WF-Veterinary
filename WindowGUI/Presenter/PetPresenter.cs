@@ -138,7 +138,7 @@ namespace WindowGUI.Presenter
                 view.Message = "Pet deleted successfully";
                 LoadAllPetList();
             }
-            catch (Exception ex)
+            catch
             {
                 view.IsSuccessful = false;
                 view.Message = "An error occured, could not delete pet";
